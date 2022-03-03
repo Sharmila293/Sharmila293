@@ -1,0 +1,71 @@
+#define N 5
+#include<stdio.h>
+int stack[N],ele,top=-1;
+int main()
+{
+   int n;
+   char str[10];
+   scanf("%d",&n);
+   while(n--)
+   {
+       scanf("%s",str);
+       if(strcmp(str,"add")==0)
+       push();
+       else if(strcmp(str,"callmin")==0)
+       callmin();
+       else if(strcmp(str,"callmax")==0)
+       callmax();
+       else if(strcmp(str,"remove")==0)
+       pop();
+   }
+}
+   void push()
+   {
+       if(top==N-1)
+       printf("stack overflow");
+       else
+       {
+           top=top+1;
+           scanf("%d",&ele);
+           stack[top]=ele;
+       }
+       }
+   void pop()
+   {
+       if(top==-1)
+       printf("invalid");
+       else
+       {
+           top=top-1;
+       }
+   }
+   void callmax()
+   {
+       int i,max=stack[0];
+       if(top==-1)
+       printf("invalid");
+       else
+       {
+           for(i=0;i<=top;i++)
+           {
+               if(max<stack[i])
+               max=stack[i];
+           }
+           printf("%d",max);
+       }
+     }
+     void callmin()
+   {
+       int i,min=stack[0];
+       if(top==-1)
+       printf("invalid");
+       else
+       {
+           for(i=0;i<=top;i++)
+           {
+               if(min>stack[i])
+               min=stack[i];
+           }
+           printf("%d",min);
+       }
+     }
