@@ -1,0 +1,102 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int data;
+    struct node *link;
+}*x,*y,*z,*head,*new;
+struct node* insert(struct node * head,int data);
+void display(struct node *head);
+// struct node* del_at_beg(struct node *head,int pos);
+struct node* del_at_pos(struct node *head,int pos);
+int main()
+{
+    struct node*head=NULL;
+    new=(struct node*)malloc(sizeof(struct node));
+    x=(struct node*)malloc(sizeof(struct node));
+    y=(struct node*)malloc(sizeof(struct node));
+    z=(struct node*)malloc(sizeof(struct node));
+    
+    new->data=43;
+    new->link=x;
+    head=new;
+    x->data=45;
+    x->link=y;
+    y->data=256;
+    y->link=z;
+    z->data=67;
+    z->link=NULL;
+   head=insert(head,35);
+    display(head);
+    head=del_at_pos(head,2);
+}
+/*struct node* insert(struct node * head,int data)
+{
+    struct node *p=malloc(sizeof(struct node));
+    p->data=data;
+    p->link=head;
+    head=p;
+    return head;
+};*/
+struct node* insert(struct node *head,int data)
+{
+    struct node *temp=(struct node*)malloc(sizeof(struct node));
+    temp->data=data;
+    temp->link=NULL;
+    if(head==NULL)
+    {
+        return temp;
+    }
+    struct node *p=head;
+    while(p->link)
+    {
+        p=p->link;
+    }
+    p->link=temp;
+    return head;
+}
+void display(struct node *head)
+{
+    if(head)
+    {
+          printf("%d \n",head->data);
+          display(head->link);
+    }
+}
+/*struct node* del_at_beg(struct node *head)
+{
+    if(head==NULL)
+    printf("list is already empty");
+    else
+    {
+        struct node *temp=head;
+        head=head->link;
+        free(temp);
+    }
+    return head;
+}*/
+struct node* del_at_pos(struct node *head,int pos)
+{
+    struct node *temp=head;
+    if(pos==0)
+    {
+        printf("element deleted %d\n ",temp->data);
+  head=head->link; // Advancing the head pointer
+    temp->link=NULL;
+    free(temp);   //node is deleted
+    }
+    else
+    {
+        for(int i=0;i<pos;i++)
+        temp=temp->link;
+        // now temp pointer points to the previous node of the node to be deleted
+        struct node *del=temp->link; // del pointer points to the node to be deleted
+        temp->link=temp->link->link;
+        printf("\n element deleted is %d",del->data);
+        del->link=NULL;
+        free(del);// node is deleted
+    }
+    return head;
+}
+
+
