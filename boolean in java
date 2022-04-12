@@ -1,0 +1,9 @@
+// BOOLEAN FN IN JAVA
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    boolean x=true;
+		System.out.println(x);
+	}
+}
