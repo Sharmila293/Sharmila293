@@ -1,0 +1,17 @@
+//PRINTING ODD USING BITWISE OPERATOR
+public class Main
+{
+	public static void main(String[] args) {
+	// boolean b=5>2;
+	int a=13;
+	int b=1;
+if((a&b)==1)
+{
+    System.out.println("odd");
+	}
+	else
+	{
+	      System.out.println("even");
+	}
+}
+}
