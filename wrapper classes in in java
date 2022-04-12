@@ -1,0 +1,16 @@
+\\ WRAPPER CLASSES
+class Main
+{
+    public static void main(String a[])
+    {
+   // System.out.println(Boolean.SIZE);
+   System.out.println(Long.SIZE);
+   System.out.println((Long.SIZE)/8);
+   System.out.println(Byte.SIZE);
+   System.out.println(Character.SIZE);              // all outputs are in bits
+   System.out.println(Short.SIZE);
+   System.out.println(Integer.SIZE);
+   System.out.println(Float.SIZE);
+   System.out.println(Double.SIZE);
+    }
+}
