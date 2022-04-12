@@ -1,0 +1,10 @@
+// BASIC JAVA PROGRAM
+public class Main
+{
+	public static void main(String[] args) // (String a[])
+	{
+	System.out.println("Sharmila");
+	int a=5;
+	System.out.println(a); // next line
+	}
+}
