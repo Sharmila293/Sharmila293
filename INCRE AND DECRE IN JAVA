@@ -4,8 +4,12 @@ public class Main
 	public static void main(String[] args)
 	{
 	    int a=5;
+	    int c=5;
 	    int b=a++ + a++;
 	System.out.println(b);
 	System.out.println(a);
+	int d=++c + ++c;
+	System.out.println(c);
+	System.out.println(d);
 	}
 }
