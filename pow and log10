@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include<math.h>
+int main()
+{
+   // printf("%d",(int)log10(8900));---------log10
+    int  dig=(int)log10(123456);
+    int x=123456;
+    printf("%lf",pow(x,dig));------------pow
+    return 0;
+}
