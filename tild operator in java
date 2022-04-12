@@ -1,0 +1,9 @@
+// TILD OPERATOR
+public class Main
+{
+	public static void main(String[] args) {
+	    int a=5;
+	    
+	System.out.println(~a); // 2's compliment of a is -(a+1)
+	}
+}
