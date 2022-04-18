@@ -1,0 +1,14 @@
+\\ adding float numbers using SCANNER
+import java.util.Scanner;
+class FirstName
+{
+	public static void main(String args[]) 
+	{
+           Scanner sc=new Scanner(System.in);
+           Float x,y;
+           x=sc.nextFloat();
+           y=sc.nextFloat();
+           Float z=x+y;
+System.out.printf("%.1f",z);
+
+}
