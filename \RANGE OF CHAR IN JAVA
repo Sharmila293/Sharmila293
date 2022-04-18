@@ -1,0 +1,11 @@
+\\RANGE OF CHAR IN JAVA
+class FirstName
+{
+	public static void main(String[] args) 
+	{
+	 
+		System.out.println((int) Character.MAX_VALUE);   // WE DO TYPECAST 
+System.out.println((int) Character.MIN_VALUE);
+	}
+}
+
