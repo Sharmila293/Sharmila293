@@ -1,0 +1,20 @@
+\\INVERSECASE IN JAVA
+import java.util.Scanner;
+class FirstName
+{
+	public static void main(String args[]) 
+	{
+           Scanner sc=new Scanner(System.in);
+           char ch;
+           ch=sc.next().charAt(0);
+if(ch>=97&&ch<=122)
+{
+System.out.println((char)(ch-32));}
+else
+{
+System.out.println((char)(ch+32));}
+
+
+}
+}
+
