@@ -1,0 +1,22 @@
+\\SECOND LARGEST
+
+import java.util.Scanner;
+class FirstName
+{
+	public static void main(String args[]) 
+	{
+           Scanner sc=new Scanner(System.in);
+           Integer x,y,z;
+           x=sc.nextInt();
+           y=sc.nextInt();
+           z=sc.nextInt();
+int d;
+if(x==y && y==z)
+System.out.println("not valid");
+else
+{
+d=((x>y&&x<z) || (x<y && x>z))?x:(y>z)?y:z;
+System.out.println(d);
+}
+}
+}
