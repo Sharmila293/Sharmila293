@@ -1,0 +1,14 @@
+\\ UNBOXING====OBJECT TO PRIMITIVE
+class FirstName
+{
+	public static void main(String[] args) 
+	{
+
+		
+Character ch=new Character('t');
+char c='a';
+ch=c;    // CH=PRIMITIVE
+System.out.println(ch);
+}
+}
+
