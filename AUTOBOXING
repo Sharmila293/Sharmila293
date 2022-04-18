@@ -1,0 +1,13 @@
+\\ AUTOBOXING
+class FirstName
+{
+	public static void main(String[] args) 
+	{
+	  int i;
+         Integer in=new Integer(10); // WRAPPER CLASS
+                                      // Integer---class,in-----class variable i.e obj,new------reads obj on class
+         i=in;
+		System.out.println(i);
+}
+}
+
