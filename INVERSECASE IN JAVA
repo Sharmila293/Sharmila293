@@ -9,12 +9,18 @@ class FirstName
            ch=sc.next().charAt(0);
 if(ch>=97&&ch<=122)
 {
-System.out.println((char)(ch-32));}
-else
+System.out.println((char)(ch-32));
+}
+else if(ch>='A'&&ch<='Z')
 {
-System.out.println((char)(ch+32));}
+System.out.println((char)(ch+32));
+}
 
-
+else{
+System.out.println("invalid character");
 }
 }
+}
+
+
 
