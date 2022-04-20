@@ -1,0 +1,17 @@
+\\ ODD OR EVEN USING TERNARY
+class First
+{
+	
+public static void main(String[] args)
+ 
+{
+int a=5;
+int x=a&1;
+String arg=(x==1)?"odd":"even";
+System.out.println(arg);
+	
+	
+}
+
+}
+
